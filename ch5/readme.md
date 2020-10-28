@@ -4,7 +4,7 @@
 
 ## 5.1 导入声明
 
-Go语言中，当package关键字成功定义一个包之后，导入语句必须在第一世界出现，然后才能是类型、常量、变量和函数等其它声明。导入包的语法如下：
+Go语言中，当package关键字成功定义一个包之后，导入语句必须在第一时间出现，然后才能是类型、常量、变量和函数等其它声明。导入包的语法如下：
 
 ```
 ImportDecl  = "import" ( ImportSpec | "(" { ImportSpec ";" } ")" ) .
@@ -335,5 +335,5 @@ var (
 
 ![](../images/ch5-decl-group-01.png)
 
-因为第一个出现的是`const`关键字，因此`*ast.File.Decls`的第一个元素是表示常量的`*ast.GenDecl`类型，其中Specs列表只有一个元素对应Pi常量。第二个出现是`var`关键字，因此`*ast.File.Decls`的第二个元素是表示变量的`*ast.GenDecl`类型，，其中Specs列表有两个元素分别对应a和b两个变量，Specs列表的长度对应组声明中元素的个数。
+因为第一个出现的是`const`关键字，因此`*ast.File.Decls`的第一个元素是表示常量的`*ast.GenDecl`类型，其中Specs列表只有一个元素对应Pi常量。第二个出现是`var`关键字，因此`*ast.File.Decls`的第二个元素是表示变量的`*ast.GenDecl`类型，其中Specs列表有两个元素分别对应a和b两个变量，Specs列表的长度对应组声明中元素的个数。
 
